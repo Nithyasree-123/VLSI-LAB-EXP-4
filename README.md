@@ -2,55 +2,56 @@
 ## SIMULATION AND IMPLEMENTATION OF SEQUENTIAL LOGIC CIRCUITS
 
 ### AIM: 
- To simulate and synthesis SR, JK, T, D - FLIPFLOP, COUNTER DESIGN using Xilinx ISE.
+To simulate and synthesis SR, JK, T, D - FLIPFLOPS, COUNTERS design using vivado.
 
 ### APPARATUS REQUIRED:
 
-Xilinx 14.7
-Spartan6 FPGA
+vivado 2023.2
 
-**LOGIC DIAGRAM**
+## LOGIC DIAGRAM:
 
-SR FLIPFLOP
+## SR FLIPFLOP:
 
 ![image](https://github.com/navaneethans/VLSI-LAB-EXP-4/assets/6987778/77fb7f38-5649-4778-a987-8468df9ea3c3)
 
 
-JK FLIPFLOP
+## JK FLIPFLOP:
 
 ![image](https://github.com/navaneethans/VLSI-LAB-EXP-4/assets/6987778/1510e030-4ddc-42b1-88ce-d00f6f0dc7e6)
 
-T FLIPFLOP
+## T FLIPFLOP:
 
 ![image](https://github.com/navaneethans/VLSI-LAB-EXP-4/assets/6987778/7a020379-efb1-4104-85ee-439d660baa08)
 
 
-D FLIPFLOP
+## D FLIPFLOP:
 
 ![image](https://github.com/navaneethans/VLSI-LAB-EXP-4/assets/6987778/dda843c5-f0a0-4b51-93a2-eaa4b7fa8aa0)
 
 
-COUNTER
+## COUNTER:
 
 ![image](https://github.com/navaneethans/VLSI-LAB-EXP-4/assets/6987778/a1fc5f68-aafb-49a1-93d2-779529f525fa)
 
 
   
 ### PROCEDURE:
-STEP:1  Start  the Xilinx navigator, Select and Name the New project.
-STEP:2  Select the device family, device, package and speed.       
-STEP:3  Select new source in the New Project and select Verilog Module as the Source type.                       
-STEP:4  Type the File Name and Click Next and then finish button. Type the code and save it.
-STEP:5  Select the Behavioral Simulation in the Source Window and click the check syntax.                       
-STEP:6  Click the simulation to simulate the program and  give the inputs and verify the outputs as per the truth table.               
-STEP:7  Select the Implementation in the Sources Window and select the required file in the Processes Window.
-STEP:8  Select Check Syntax from the Synthesize  XST Process. Double Click in the  FloorplanArea/IO/Logic-Post Synthesis process in the User Constraints process group. UCF(User constraint File) is obtained. 
-STEP:9  In the Design Object List Window, enter the pin location for each pin in the Loc column Select save from the File menu.
-STEP:10 Double click on the Implement Design and double click on the Generate Programming File to create a bitstream of the design.(.v) file is converted into .bit file here.
-STEP:11  On the board, by giving required input, the LEDs starts to glow light, indicating the output.
+STEP:1 Start the vivado software, Select and Name the New project.
 
-### VERILOG CODE:
-### SR FLIPFLOP:
+STEP:2 Select the device family, device, package and speed.
+
+STEP:3 Select new source in the New Project and select Verilog Module as the Source type.
+
+STEP:4 Type the File Name and module name and Click Next and then finish button. Type the code and save it.
+
+STEP:5 Select the run simulation and then run Behavioral Simulation in the Source Window and click the check syntax.
+
+STEP:6 Click the simulation to simulate the program and give the inputs and verify the outputs as per the truth table.
+
+STEP:7 compare the output with truth table.
+
+## VERILOG CODE:
+## SR FLIPFLOP:
 ```
 module srff(clk,j,k,rst,q );
 
@@ -88,7 +89,7 @@ end
 
 endmodule
 ```
-### JK FLIPFLOP:
+## JK FLIPFLOP:
 ```
 module jkff(clk,j,k,rst,q );
 
@@ -158,7 +159,7 @@ end
 
 endmodule
 ```
-### D FLIPFLOP:
+## D FLIPFLOP:
 ```
 module dff(clk,d,rst,q );
 
@@ -183,7 +184,7 @@ end
 endmodule
 ```
 
-### UPDOWN COUNTER:
+## UPDOWN COUNTER:
 ```
 module updown(clk,rst,up_down,count);
 
@@ -212,7 +213,7 @@ end
 endmodule
 ```
 
-### MOD 10 COUNTER:
+## MOD 10 COUNTER:
 ```
 module mod(clk,rst,count);
 
@@ -237,7 +238,7 @@ end
 endmodule
 ```
 
-### RIPPLE COUNTER:
+## RIPPLE COUNTER:
 ```
 module ripplecounter(clk,rst,q);
 
@@ -295,28 +296,28 @@ endmodule
 ```
 
 ## OUTPUT WAVEFORM:
-### SR flipflop:
+## SR flipflop:
 
 <img width="1007" alt="320183966-e21bd2e2-b69f-424b-9da2-ced2f8da8622" src="https://github.com/Nithyasree-123/VLSI-LAB-EXP-4/assets/164908713/9b66f2aa-ec10-4d82-88c1-ff8be0872b69">
 
-### JK flipflop:
+## JK flipflop:
 
 <img width="1012" alt="320184046-d989b3ab-a0fb-4bb9-969d-0817eff565eb" src="https://github.com/Nithyasree-123/VLSI-LAB-EXP-4/assets/164908713/a2ad12e4-ccf2-42de-a6d6-1e56fb1c800e">
 
-### T flipflop:
+## T flipflop:
 <img width="942" alt="320184083-bf2966e2-f9d8-40cd-ad7d-289702a75078" src="https://github.com/Nithyasree-123/VLSI-LAB-EXP-4/assets/164908713/e0c26837-131a-43bc-bc5f-2cf3bd15d60c">
 
-### D flipflop:
+## D flipflop:
 
 <img width="943" alt="320184078-c9027cd8-06a8-4647-a4b2-fd48536a5e04" src="https://github.com/Nithyasree-123/VLSI-LAB-EXP-4/assets/164908713/24e68e11-c062-498e-9bdf-ff5f78888d96">
 
-### Updown counter:
+## Updown counter:
 <img width="1089" alt="320184128-22f1ecee-4349-4d37-bb84-4310ec89e00a" src="https://github.com/Nithyasree-123/VLSI-LAB-EXP-4/assets/164908713/529d8c41-6605-4798-87ae-2052720a2a55">
 
-### Mod 10 counter:
+## Mod 10 counter:
 <img width="1017" alt="320184154-56d42f95-1ad0-4396-97f3-5fee5ec0d539" src="https://github.com/Nithyasree-123/VLSI-LAB-EXP-4/assets/164908713/defb0e11-10f7-40bd-b5e9-46e6d511c121">
 
-### Ripple counter:
+## Ripple counter:
 ![320185653-f37d8d04-cbc1-44b2-8704-ba28fe340d2f](https://github.com/Nithyasree-123/VLSI-LAB-EXP-4/assets/164908713/1de1deb8-5c88-43d0-90f9-ff812a36034c)
 
 ## RESULT:
